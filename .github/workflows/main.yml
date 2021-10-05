@@ -11,7 +11,8 @@ jobs:
       uses: wpengine/github-action-wpe-site-deploy@v2.3.3
       with:
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
-        PHP_LINT: TRUE        
+        PHP_LINT: TRUE
+        FLAGS: -azvr --inplace --delete
         CACHE_CLEAR: TRUE
         TPO_SRC_PATH: "wp-content/plugins/"
         TPO_PATH: "wp-content/plugins/"      
@@ -25,7 +26,8 @@ jobs:
       uses: wpengine/github-action-wpe-site-deploy@v2.3.3
       with:
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
-        PHP_LINT: TRUE        
+        PHP_LINT: TRUE
+        FLAGS: -azvr --inplace --delete
         CACHE_CLEAR: TRUE
         TPO_SRC_PATH: "wp-content/themes/twentytwentyone/"
         TPO_PATH: "wp-content/themes/twentytwentyone/"      
