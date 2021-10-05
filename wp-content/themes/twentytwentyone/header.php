@@ -1,4 +1,3 @@
-Hello, this is auto deployment
 <?php
 /**
  * The header.
