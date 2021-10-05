@@ -13,7 +13,7 @@ jobs:
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
         PHP_LINT: TRUE        
         CACHE_CLEAR: TRUE
-        TPO_SRC_PATH: "wp-content/themes/twentytwentyone"
-        TPO_PATH: "wp-content/themes"      
+        TPO_SRC_PATH: "wp-content/themes/twentytwentyone/"
+        TPO_PATH: "wp-content/themes/twentytwentyone/"      
         DEV_BRANCH: main
         DEV_ENV: bosleydevelop
