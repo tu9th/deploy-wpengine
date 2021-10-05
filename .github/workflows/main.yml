@@ -3,11 +3,25 @@ on:
   push:
 
 jobs:
-  build:
+  deploy-plugin:
     runs-on: ubuntu-latest  
     steps: 
     - uses: actions/checkout@v2
-    - name: GitHub Action Deploy to WP Engine
+    - name: Deploy Plugin
+      uses: wpengine/github-action-wpe-site-deploy@v2.3.3
+      with:
+        WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
+        PHP_LINT: TRUE        
+        CACHE_CLEAR: TRUE
+        TPO_SRC_PATH: "wp-content/plugins/"
+        TPO_PATH: "wp-content/plugins/"      
+        DEV_BRANCH: main
+        DEV_ENV: bosleydevelop
+  deploy-theme:
+    runs-on: ubuntu-latest  
+    steps: 
+    - uses: actions/checkout@v2
+    - name: Deploy Theme
       uses: wpengine/github-action-wpe-site-deploy@v2.3.3
       with:
         WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPE_SSHG_KEY_PRIVATE }} 
