@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Hello_Dolly
+ * @package Hello_Dolly Test Deploy
  * @version 1.7.2
  */
 /*
