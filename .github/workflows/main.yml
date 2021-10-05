@@ -20,5 +20,5 @@ jobs:
         TPO_PATH: "wp-content/themes/twentytwentyone"
         
       # Branches & Environments 
-        PRD_BRANCH: main
-        PRD_ENV: bosleydevelop
+        DEV_BRANCH: main
+        DEV_ENV: bosleydevelop
