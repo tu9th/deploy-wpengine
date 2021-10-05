@@ -5,6 +5,17 @@ on:
       - main
   workflow_dispatch:
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Node build
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+        cache: 'npm'
+    - run: cd wp-content/themes/twentytwentyone
+    - run: npm install
   deploy-plugin:
     runs-on: ubuntu-latest  
     steps: 
