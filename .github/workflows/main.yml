@@ -16,8 +16,8 @@ jobs:
         PHP_LINT: TRUE
         FLAGS: -azvr --inplace --delete --exclude=".*" --exclude-from=.deployignore
         CACHE_CLEAR: TRUE
-        TPO_SRC_PATH: "wp-content/themes/twentytwentyone/"
-        TPO_PATH: "wp-content/themes/twentytwentyone/"
+        TPO_SRC_PATH: "wp-content/themes/twentytwentyone"
+        TPO_PATH: "wp-content/themes/twentytwentyone"
         
       # Branches & Environments 
         PRD_BRANCH: main
