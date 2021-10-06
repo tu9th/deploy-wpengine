@@ -14,8 +14,8 @@ jobs:
       with:
         node-version: '14'
         cache: 'npm'
-        path: "wp-content/themes/twentytwentyone/"
     - run: npm install
+      working-directory: ./wp-content/themes/twentytwentyone/
   deploy:
     runs-on: ubuntu-latest  
     steps: 
