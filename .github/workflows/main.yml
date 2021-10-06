@@ -10,13 +10,12 @@ jobs:
     name: Node build
     steps:   
     - uses: actions/checkout@v2
-      with:
-       path: "wp-content/themes/twentytwentyone/"
     - uses: actions/setup-node@v2
       with:
         node-version: '14'
         cache: 'npm'    
     - run: npm install
+      working-directory: "wp-content/themes/twentytwentyone/"
   deploy:
     runs-on: ubuntu-latest  
     steps: 
