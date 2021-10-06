@@ -8,15 +8,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Node build
-    steps:
-    - run: cd wp-content/themes/twentytwentyone
+    steps:   
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2
       with:
+        path: "wp-content/themes/twentytwentyone/"
         node-version: '14'
         cache: 'npm'    
     - run: npm install
-  deploy-plugin:
+  deploy:
     runs-on: ubuntu-latest  
     steps: 
     - uses: actions/checkout@v2
