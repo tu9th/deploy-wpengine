@@ -10,9 +10,10 @@ jobs:
     name: Node build
     steps:   
     - uses: actions/checkout@v2
+      with:
+       path: "wp-content/themes/twentytwentyone/"
     - uses: actions/setup-node@v2
       with:
-        path: "wp-content/themes/twentytwentyone/"
         node-version: '14'
         cache: 'npm'    
     - run: npm install
